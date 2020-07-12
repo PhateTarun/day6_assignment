@@ -1,8 +1,12 @@
-#!/bin/bash -x
-
-read -p "Enter the value of n: " n
-
-for (( counter=2; counter <= $((2**$n)); counter+=2 )) #incrementing counter with 2, using 2^n as limit
+#!/bin/bash/ -x
+#read input
+read -p "Enter number: " number
+#constants
+upper_limit=256
+#variables
+two_power_n=$((2**$number))
+table=2
+while [ $table -le $upper_limit ]
 do
-	echo $counter
-done 
+	((table+=2))
+done
